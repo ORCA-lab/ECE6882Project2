@@ -7,41 +7,7 @@ import torch
 import numpy as np
 from utils import *
 
-def test(agent,alpha):
-    env_v = gym.make("CarRacing-v3", render_mode="rgb_array",domain_randomize=True)
-    agent.PPO_Net.load_state_dict(torch.load("param.pt", map_location="cpu"))
-    agent.PPO_Net.eval()
-    frames = []
-    steers = []
-    #various test case:
-    #out_of_track
-    numofftrack=0
-
-    #for _ in range(50):
-    state_v, info_v = env_v.reset()
-
-    # play one episode
-    done_v = False
-    score=0
-
-    while not done_v:
-        # select an action A_{t} using S_{t} as input for the agent
-        frames.append(env_v.render())
-        with torch.no_grad():
-            action_v = agent.select_action(state_v[None,:])
-
-        a = action_v.detach().cpu().numpy().squeeze().astype(np.float32)
-        a = np.clip(a, [-1.0, 0.0, 0.0], [1.0, 1.0, 1.0])
-        steers.append(float(a[0]))
-
-        # perform the action A_{t} in the environment to get S_{t+1} and R_{t+1}
-        state_v, reward_v, terminated_v, truncated_v, info_v = env_v.step(action_v.detach().cpu().numpy().squeeze())
-        score+=reward_v
-        # update if the environment is done
-        done_v = terminated_v or truncated_v
-
-    env_v.close()
-
+def calculatescore(returns,steers,env_v,alpha):
     #zigzag penalty
     m = zigzag_metrics(steers, deadband=0.5)
     if(m>10):
@@ -63,5 +29,58 @@ def test(agent,alpha):
     else:
         print("car isn't halt for long time")
 
-    print("total score is ",score-alpha*halt-alpha*m-alpha*uturn)
+    return returns-alpha*halt-alpha*uturn-alpha*m
 
+
+def evaluate(qfile: str,qtars: str,max_steps: int = 1200, render: bool = True):
+    
+    seeds=[0,2]
+    steers=[]
+    device= "cuda" if torch.cuda.is_available() else "cpu"
+    #test case 1:
+    env = make_env(render_mode="rgb_array", domain_randomize=True)
+    agent = CarRaceAgent(n_actions=env.action_space.n, device=device)
+    agent.load_parameter(qfile,qtars)
+    rets = []
+    s, _ = env.reset(seed=seeds[0])
+    ep_ret = 0.0
+    while True:
+        a = agent.act(s, greedy=True)
+        steers.append(a[0])
+        s, r, terminated, truncated, info = env.step(a)
+        ep_ret += r
+        if terminated or truncated:
+            break
+
+    ep_ret1=calculatescore(ep_ret,steers,env,0.01)
+    env.close()
+    print("Test case 1 Eval returns:", ep_ret1)
+
+    #test case 2:
+    env = make_env(render_mode="rgb_array", domain_randomize=True)
+    agent = CarRaceAgent(n_actions=env.action_space.n, device=device)
+    agent.load_parameter(qfile,qtars)
+    rets = []
+    s, _ = env.reset(seed=seeds[1])
+    ep_ret = 0.0
+    while True:
+        a = agent.act(s, greedy=True)
+        steers.append(a[0])
+        s, r, terminated, truncated, info = env.step(a)
+        ep_ret += r
+        if terminated or truncated:
+            break
+
+    ep_ret2=calculatescore(ep_ret,steers,env,0.01)
+    env.close()
+    print("Test case 2 Eval returns:", ep_ret2)
+
+    return rets
+
+
+if __name__ == "__main__":
+    parser = parse_arg()
+    args = parser.parse_args()
+    qfile="q.pt"
+    qtars="qtar.pt"
+    evaluate(qfile,qtars)
