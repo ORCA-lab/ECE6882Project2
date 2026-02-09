@@ -7,6 +7,72 @@ import torch
 import numpy as np
 from utils import *
 
+
+class DiscretizeCarRacing(gym.ActionWrapper):
+    def __init__(self, env: gym.Env):
+        super().__init__(env)
+
+        # A small but effective discrete set.
+        # You can expand this set if you want higher performance.
+        self._actions = [
+            np.array([ 0.0, 0.0, 0.0], dtype=np.float32),  # do nothing (coast)
+            np.array([ 0.0, 1.0, 0.0], dtype=np.float32),  # straight gas
+            np.array([ 0.0, 0.0, 0.8], dtype=np.float32),  # brake
+            np.array([-1.0, 0.6, 0.0], dtype=np.float32),  # hard left + gas
+            np.array([ 1.0, 0.6, 0.0], dtype=np.float32),  # hard right + gas
+            np.array([-0.5, 0.8, 0.0], dtype=np.float32),  # gentle left + gas
+            np.array([ 0.5, 0.8, 0.0], dtype=np.float32),  # gentle right + gas
+            np.array([-1.0, 0.0, 0.0], dtype=np.float32),  # hard left coast
+            np.array([ 1.0, 0.0, 0.0], dtype=np.float32),  # hard right coast
+        ]
+
+        self.action_space = gym.spaces.Discrete(len(self._actions))
+
+    def action(self, act: int) -> np.ndarray:
+        return self._actions[int(act)].copy()
+
+
+class FrameStack84(gym.Wrapper):
+    """
+    Returns state as (4, 84, 84) uint8.
+    """
+    def __init__(self, env: gym.Env, k: int = 4):
+        super().__init__(env)
+        self.k = k
+        self.frames = deque(maxlen=k)
+
+        self.observation_space = gym.spaces.Box(
+            low=0,
+            high=255,
+            shape=(k, 84, 84),
+            dtype=np.uint8,
+        )
+
+    def reset(self, **kwargs):
+        obs, info = self.env.reset(**kwargs)
+        frame = preprocess_frame(obs)
+        for _ in range(self.k):
+            self.frames.append(frame)
+        return np.stack(self.frames, axis=0), info
+
+    def step(self, action):
+        obs, reward, terminated, truncated, info = self.env.step(action)
+        frame = preprocess_frame(obs)
+        self.frames.append(frame)
+        return np.stack(self.frames, axis=0), reward, terminated, truncated, info
+
+def make_env(render_mode=None, domain_randomize=False):
+    env = gym.make(
+        "CarRacing-v3",
+        render_mode=render_mode,
+        domain_randomize=domain_randomize,
+        continuous=False,  
+    )
+    env = DiscretizeCarRacing(env)   
+    env = FrameStack84(env, k=4)    
+    return env
+
+
 def calculatescore(returns,steers,env_v,alpha):
     #zigzag penalty
     m = zigzag_metrics(steers, deadband=0.5)
