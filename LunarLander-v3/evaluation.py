@@ -49,7 +49,7 @@ def evaluate(
         ep_ret = 0.0
         ep_len = 0
 
-        # Optional: track stability metrics from obs
+
         angle_sum = 0.0
         angvel_sum = 0.0
 
