@@ -73,17 +73,9 @@ def make_env(render_mode=None, domain_randomize=False):
 def calculatescore(returns,steers,env_v,alpha):
     #zigzag penalty
     m = zigzag_metrics(steers, deadband=0.5)
-    if(m>10):
-        print("car zigzags too much")
-    else:
-        print("car isn't zigzag too much")
 
     #halt penalty
     halt=is_halted_speed(env_v)
-    if(halt!=0):
-        print("car halts for long time")
-    else:
-        print("car isn't halt for long time")
 
     return returns-alpha*halt-alpha*m
 
@@ -93,44 +85,45 @@ def evaluate(qfile: str,max_steps: int = 1200, render: bool = True):
     seeds=[0,2]
     steers=[]
     device= "cuda" if torch.cuda.is_available() else "cpu"
-    
     #test case 1:
-    env = make_env(render_mode="rgb_array", domain_randomize=True)
-    #Todo: change to your own agent
-    agent = CarRaceAgent(n_actions=env.action_space.n, device=device)
+    frames = []
+    env = make_env(render_mode="rgb_array",domain_randomize=True)
+    agent = DQNAgent(n_actions=env.action_space.n, device=device)
     agent.load_parameter(qfile)
     rets = []
     s, _ = env.reset(seed=seeds[0])
     ep_ret = 0.0
     while True:
-        #Todo: change to you own agent action
-        a = agent.act(s)
-        steers.append(a[0])
+        frames.append(env.render())
+        a = agent.act(s, greedy=True)
+        steers.append(a)
         s, r, terminated, truncated, info = env.step(a)
         ep_ret += r
         if terminated or truncated:
             break
 
-    ep_ret1=calculatescore(ep_ret,steers,env,0.01)
+    ep_ret1=calculatescore(ep_ret,steers,env,0.1)
     env.close()
-    imageio.mimsave("testcase1.gif", frames, fps=30)    
+    #pdb.set_trace()
+    imageio.mimsave("testcase1.gif", frames, fps=30)
     print("Test case 1 Eval returns:", ep_ret1)
 
     #test case 2:
+    frames2=[]
     env = make_env(render_mode="rgb_array", domain_randomize=True)
     rets = []
     s, _ = env.reset(seed=seeds[1])
     ep_ret = 0.0
     while True:
-        #Todo: change to you own agent action        
-        a = agent.act(s)
-        steers.append(a[0])
+        frames2.append(env.render())
+        a = agent.act(s, greedy=True)
+        steers.append(a)
         s, r, terminated, truncated, info = env.step(a)
         ep_ret += r
         if terminated or truncated:
             break
 
-    ep_ret2=calculatescore(ep_ret,steers,env,0.01)
+    ep_ret2=calculatescore(ep_ret,steers,env,0.1)
     env.close()
     imageio.mimsave("testcase2.gif", frames2, fps=30)
     print("Test case 2 Eval returns:", ep_ret2)
@@ -138,9 +131,8 @@ def evaluate(qfile: str,max_steps: int = 1200, render: bool = True):
     return rets
 
 
+
 if __name__ == "__main__":
-    parser = parse_arg()
-    args = parser.parse_args()
-    #Todo: put your saved agent parameter file here if you have
     qfile="q.pt"
+    #agent,_=train(qfile,qtars)
     evaluate(qfile)
