@@ -33,9 +33,6 @@ class DiscretizeCarRacing(gym.ActionWrapper):
 
 
 class FrameStack84(gym.Wrapper):
-    """
-    Returns state as (4, 84, 84) uint8.
-    """
     def __init__(self, env: gym.Env, k: int = 4):
         super().__init__(env)
         self.k = k
