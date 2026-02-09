@@ -27,10 +27,6 @@ def evaluate(
     wind_test: bool = True,
     device: str = "cuda" if torch.cuda.is_available() else "cpu",
 ):
-    """
-    Evaluates a saved agent on multiple seeds.
-    If wind_test=True, we enable wind (harder) during eval.
-    """
     results = []
 
     # Create an env once just to read dims
@@ -55,7 +51,7 @@ def evaluate(
 
         for _ in range(max_steps):
             frames.append(env.render())
-            a = agent.act(s, greedy=True)
+            a = agent.act(s)
             s, r, terminated, truncated, info = env.step(a)
 
             ep_ret += float(r)
@@ -97,7 +93,7 @@ def evaluate(
 if __name__ == "__main__":
     qfile = "q.pt"
 
-    # Evaluate on fixed seeds
+    # Evaluate
     _ = evaluate(
         qfile=qfile,
         seeds=(0, 2),
