@@ -24,7 +24,7 @@
        def load_parameter(self,qfile):
 
        #agent save parameter (you need to implement this function if you use model based framework such as DQN, PPO, etc)
-       def save_parameter(self,qfile,qtarfile):
+       def save_parameter(self,qfile):
    ```
 
 3. Running evaluation script
