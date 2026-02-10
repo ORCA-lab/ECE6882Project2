@@ -44,6 +44,7 @@
 3. Rubrics for each agent:
 
    The overal scores are composed of the original return from the agent minus some penalties:
+   
    (1). Car Racing penalty:
       ```
       car is making zigzag while on a straight line.
