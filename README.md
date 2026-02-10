@@ -12,12 +12,13 @@
 
    For each of the problem, you are required to write an agent which facilitate to get the optimizaed solutions. In order to be evaluated easily, please use the following template for each 3 problems:
    ```
-   #Car Racing Agent
-   class CarRaceAgent:
+   #Agent function:
+   class Agent:
        #initialize the agent, with input of number of actions
        def __init__(self,n_actions: int,):
 
        #agent takes action, with input indicating current state
+       #important !!! don't change this function name
        def act(self, state: np.ndarray):
 
        #agent load parameter (you need to implement this function if you use model based framework such as DQN, PPO, etc)
