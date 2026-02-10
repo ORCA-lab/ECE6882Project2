@@ -73,7 +73,6 @@ def make_env(render_mode=None, domain_randomize=False):
 def calculatescore(returns,steers,env_v,alpha):
     #zigzag penalty
     m = zigzag_metrics(steers, deadband=0.5)
-
     #halt penalty
     halt=is_halted_speed(env_v)
 
@@ -88,14 +87,16 @@ def evaluate(qfile: str,max_steps: int = 1200, render: bool = True):
     #test case 1:
     frames = []
     env = make_env(render_mode="rgb_array",domain_randomize=True)
-    agent = DQNAgent(n_actions=env.action_space.n, device=device)
+    #Todo: set your own agent
+    agent = Agent()
     agent.load_parameter(qfile)
     rets = []
     s, _ = env.reset(seed=seeds[0])
     ep_ret = 0.0
     while True:
         frames.append(env.render())
-        a = agent.act(s, greedy=True)
+        #Todo: set the action selection function
+        a = agent.act(s)
         steers.append(a)
         s, r, terminated, truncated, info = env.step(a)
         ep_ret += r
@@ -104,7 +105,7 @@ def evaluate(qfile: str,max_steps: int = 1200, render: bool = True):
 
     ep_ret1=calculatescore(ep_ret,steers,env,0.1)
     env.close()
-    #pdb.set_trace()
+    
     imageio.mimsave("testcase1.gif", frames, fps=30)
     print("Test case 1 Eval returns:", ep_ret1)
 
@@ -116,6 +117,7 @@ def evaluate(qfile: str,max_steps: int = 1200, render: bool = True):
     ep_ret = 0.0
     while True:
         frames2.append(env.render())
+        #Todo: set the action selection function
         a = agent.act(s, greedy=True)
         steers.append(a)
         s, r, terminated, truncated, info = env.step(a)
@@ -133,6 +135,6 @@ def evaluate(qfile: str,max_steps: int = 1200, render: bool = True):
 
 
 if __name__ == "__main__":
+    #Todo: set your own model parameter file
     qfile="q.pt"
-    #agent,_=train(qfile,qtars)
     evaluate(qfile)
