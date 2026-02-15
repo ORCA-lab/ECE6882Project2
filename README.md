@@ -13,7 +13,7 @@
    For each of the problem, you are required to write an agent which facilitate to get the optimizaed solutions. In order to be evaluated easily, please use the following template for each 3 problems:
    ```
    #Agent function:
-   class {xxx}Agent:
+   class xxxAgent:
        #initialize the agent, with input of number of actions
        def __init__(self,n_actions: int,):
 
