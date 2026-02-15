@@ -5,7 +5,8 @@ from env import ImageEnv
 import pdb
 import torch
 import numpy as np
-from utils import *
+#your submission file
+from xxx import xxxAgent, make_env
 
 
 def evaluation(env_id="CarRacing-v3", env=None, agent=None, testcase=[0,2]):
