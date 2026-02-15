@@ -41,15 +41,5 @@
 
 3. Rubrics for each agent:
 
-   The overal scores are composed of the original return from the agent minus some penalties:
-   
-   (1). Car Racing penalty:
-      ```
-      car is making zigzag while on a straight line.
-      car is making a halt during running
-      ```
-   (2). Lunar Lander penalty:
-      ```
-      Lander makes sharp angles
-      ```
+   The overal score are composed of the averaged original returns from 8 test cases where 2 of them are released for you for reference, other 6 test cases are used for final scores. This score is used for ranking among other teams. 
    
