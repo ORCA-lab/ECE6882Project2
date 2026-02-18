@@ -1,7 +1,7 @@
 # Welcome to ECE6882 Reinforcement Learning Project 2 Repo
 
 
-1. Description and requirement of project:
+1. Description and tasks of project:
    
       This project used environment from gymnasium (gym) and it has three problems: Car-Racing-v3, LunarLander-v3, and Humanoid.
    CarRacing-v3 and LunarLander-v3 are from Box2D environment while Humanoid is from MuJoCo environment.
@@ -27,6 +27,7 @@
    The agent function names should be: CarRace-v3: CarRaceAgent, LunarLander-v3: LunarLanderAgent, Humanoid: HumanoidAgent
    
    Besides the required functions listed above, you can implement other functions inside the agent class as you wish.
+   
    **For CarRaceAgent, if you would like to define a wrapper to better fit into your agent, please finish the following classes in xxx.py:**
    ```
    def make_env(render_mode=None):
