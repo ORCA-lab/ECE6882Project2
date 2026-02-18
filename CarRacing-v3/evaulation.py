@@ -27,7 +27,7 @@ def evaluation(env_id="CarRacing-v3", env=None, agent=None, testcase=[0,2]):
         rets.append(ep_ret)
 
     env.close()
-    return float(np.mean(rets)), float(np.std(rets))
+    return float(np.sum(rets))
 
 
 
@@ -45,5 +45,5 @@ if __name__ == "__main__":
     agent.load_parameter("xxx.pt")
     #run test case
     testcase=[0,2]
-    avg, std = evaluation(env_id="CarRacing-v3", env=env,agent=agent, testcase=testcase)
-    print("Final eval:", avg, "±", std)
+    total= evaluation(env_id="CarRacing-v3", env=env,agent=agent, testcase=testcase)
+    print("Final eval:", total)
