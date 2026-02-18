@@ -10,9 +10,9 @@
       https://gymnasium.farama.org/
       ```
 
-   For each of the problem, you are required to write an agent which facilitate to get the optimizaed solutions. In order to be evaluated easily, please use the following template for each 3 problems:
+   For each of the problem, you are required to write an agent to get the optimizaed solutions. In order to be evaluated easily, please use the following template for each 3 problems and finish those functions:
    ```
-   #Agent function:
+   #Agent class:
    class xxxAgent:
        #initialize the agent, with input of number of actions
        def __init__(self,n_actions: int,):
@@ -23,14 +23,17 @@
 
        #agent load parameter (you need to implement this function if you use model based framework such as DQN, PPO, etc)
        def load_parameter(self,file):
-
    ```
    The agent function names should be: CarRace-v3: CarRaceAgent, LunarLander-v3: LunarLanderAgent, Humanoid: HumanoidAgent
    
    Besides the required functions listed above, you can implement other functions inside the agent class as you wish.
+   **For CarRaceAgent, if you would like to define a wrapper to better fit into your agent, please finish the following classes in xxx.py:***
+   ```
+   def CarRaceAgentWrapper(gym.wrapper):
+   
+   ```
 
-
-2. Running evaluation script:
+3. Running evaluation script:
 
    I provided two sample testcases for each problems to help you verify your agent functionalities and improve your agent performance. However, the eventual official scores for each problems will be tested more cases besides these two. In order to make the evaluation fair, please don't change the testcases by yourself.
    To run the evaluation, simply run the following command for each agent. 
@@ -39,7 +42,7 @@
    ```
    It will output the scores for each testcase. 
 
-3. Rubrics for each agent:
+4. Rubrics for each agent:
 
    The overal score are composed of the averaged original returns from 8 test cases where 2 of them are released for you for reference, other 6 test cases are used for final scores. This score is used for ranking among other teams. 
    
