@@ -46,8 +46,9 @@ if __name__ == "__main__":
     agent.load_parameter("xx.pt")
     #test the agent
     testcases=[0,2]
-    _ = evaluate(
+    result = evaluate(
         agent,
         env,
         testcase=testcases
     )
+    print("eventual score is: ", np.sum(result))
