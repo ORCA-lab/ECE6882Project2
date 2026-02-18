@@ -34,7 +34,7 @@ class xxxAgent:
 
     def act(self, s, **kwargs):
 
-    def load_parameter(self, file: str, **kwargs):
+    def load_parameter(self, file: str):
 
     #other functions can be here
     
