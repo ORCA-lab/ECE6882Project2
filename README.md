@@ -27,7 +27,7 @@
    The agent function names should be: CarRace-v3: CarRaceAgent, LunarLander-v3: LunarLanderAgent, Humanoid: HumanoidAgent
    
    Besides the required functions listed above, you can implement other functions inside the agent class as you wish.
-   **For CarRaceAgent, if you would like to define a wrapper to better fit into your agent, please finish the following classes in xxx.py:***
+   **For CarRaceAgent, if you would like to define a wrapper to better fit into your agent, please finish the following classes in xxx.py:**
    ```
    def CarRaceAgentWrapper(gym.wrapper):
    
