@@ -44,5 +44,5 @@
 
 4. Rubrics for each agent:
 
-   The overal score are composed of the averaged original returns from 8 test cases where 2 of them are released for you for reference, other 6 test cases are used for final scores. This score is used for ranking among other teams. 
+   The overal score are composed of the **summation** original returns from 8 test cases where 2 of them are released for you for reference, other 6 test cases are used for final scores. This score will be used for ranking among all teams. 
    
