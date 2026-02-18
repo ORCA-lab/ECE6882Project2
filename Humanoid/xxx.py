@@ -65,4 +65,4 @@ class xxxAgent:
 
     def act(self, s,**kwargs):
 
-    def load_parameter(self,file):
+    def load_parameter(self,file, **kwargs):
