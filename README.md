@@ -44,5 +44,9 @@
 
 4. Rubrics for each agent:
 
-   The overal score are composed of the **summation** original returns from 8 test cases where 2 of them are released for you for reference, other 6 test cases are used for final scores. This score will be used for ranking among all teams. 
+   The overal score are composed of the **summation** of original returns from 8 test cases where 2 of them are released for you for reference, other 6 test cases are hidden for final scores. This score will be used for ranking among all teams.
+
+5. Submission of problems:
+
+   For each problem, First, change the file "xxx.py" into your own group name, for example "Henry.py" with the group name "Henry". Next, submit both **evaluation.py** and **{groupname}.py** onto blackboard.
    
