@@ -35,7 +35,7 @@
 
 3. Running evaluation script:
 
-   I provided two sample testcases for each problems to help you verify your agent functionalities and improve your agent performance. However, the eventual official scores for each problems will be tested more cases besides these two. In order to make the evaluation fair, please don't change the testcases by yourself.
+   I provided **two sample testcases** for each problems to help you verify your agent functionalities and improve your agent performance. However, the eventual official scores for each problems will be tested more cases besides these two. In order to make the evaluation fair, please don't change the testcases by yourself.
    To run the evaluation, simply run the following command for each agent. 
    ```
    python evaluation.py
