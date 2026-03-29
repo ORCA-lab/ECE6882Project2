@@ -48,5 +48,5 @@
 
 5. Submission of problems:
 
-   For each problem, First, change the file "xxx.py" into your own group name, for example "Henry.py" with the group name "Henry". Next, put both **evaluation.py** and **{groupname}.py** into a folder "{groupname}_project2", then submit that folder into the following google drive link: https://drive.google.com/drive/folders/1eyOR_2JpYFuz4fZX0F0zMmSrPxA-8En4?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto.
+   For each problem, First, change the file "xxx.py" into your own group name, for example "Henry.py" with the group name "Henry". Next, put both **evaluation.py** and **{groupname}.py** into a folder "{groupname}_project2" and compress it as "{groupname}_project2.zip", then submit that file into the following link: https://docs.google.com/forms/d/1pGDgwcpdOfWkJZ9iuMBMnfL2ucVED6SNwX0c53Wgb5I/edit
    
