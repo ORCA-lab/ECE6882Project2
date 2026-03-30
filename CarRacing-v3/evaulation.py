@@ -1,5 +1,4 @@
 import gymnasium as gym
-from agent import CarRaceAgent
 import imageio.v2 as imageio
 from env import ImageEnv
 import pdb
