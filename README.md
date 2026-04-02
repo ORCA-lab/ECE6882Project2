@@ -93,5 +93,21 @@
            <code>4848.87</code>
            </td>
         </tr>
+        <tr>
+           <td>
+           <code>Arante_Andre</code>
+           </td>
+           <td>
+           <code>2074.99</code>
+           </td>
+        </tr>
+        <tr>
+           <td>
+           <code>Jani</code>
+           </td>
+           <td>
+           <code>378.98</code>
+           </td>
+        </tr>
      </tbody>
    </table>
