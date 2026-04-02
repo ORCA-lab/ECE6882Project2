@@ -49,4 +49,6 @@
 5. Submission of problems:
 
    For each problem, First, change the file "xxx.py" into your own group name, for example "Henry.py" with the group name "Henry". Next, put both **evaluation.py**, **{groupname}.py** and your **training parameter** into a folder "{groupname}_project2" and compress it as "{groupname}_project2.zip", then submit that file into the following link: https://docs.google.com/forms/d/e/1FAIpQLSevo4xUkgtBl3whhFJzD5qNL_C4yFytgyyy4W-gMaPv9bpzFw/viewform?usp=dialog
-   
+
+# LeaderBoard
+
