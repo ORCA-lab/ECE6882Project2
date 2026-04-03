@@ -186,7 +186,6 @@
         </tr>
      </tbody>
    </table>
-
 3. Humanoid
 <table>
      <thead>
