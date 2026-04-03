@@ -61,6 +61,14 @@
        </tr>
      </thead>
      <tbody>
+        <tr>
+         <td>
+           <code>Hajimi</code>
+         </td>
+         <td>
+           <code>829.71</code>
+         </td>
+       </tr>
        <tr>
          <td>
            <code>JAC</code>
