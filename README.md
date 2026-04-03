@@ -66,7 +66,7 @@
            <code>JAC</code>
          </td>
          <td>
-           <code>7585.07</code>
+           <code>758.51</code>
          </td>
        </tr>
         <tr>
@@ -74,7 +74,7 @@
            <code>Ziyuan_Zhou901</code>
            </td>
            <td>
-           <code>7173.35</code>
+           <code>717.33</code>
            </td>
         </tr>
          <tr>
@@ -82,7 +82,7 @@
            <code>Desi_Reinforcement</code>
            </td>
            <td>
-           <code>5659.49</code>
+           <code>565.95</code>
            </td>
         </tr>
         <tr>
@@ -90,15 +90,7 @@
            <code>Vu_Dao</code>
            </td>
            <td>
-           <code>4848.87</code>
-           </td>
-        </tr>
-        <tr>
-           <td>
-           <code>Arante_Andre</code>
-           </td>
-           <td>
-           <code>2074.99</code>
+           <code>484.89</code>
            </td>
         </tr>
         <tr>
@@ -106,7 +98,15 @@
            <code>Jani</code>
            </td>
            <td>
-           <code>378.98</code>
+           <code>238.77</code>
+           </td>
+        </tr>
+        <tr>
+           <td>
+           <code>Arante_Andre</code>
+           </td>
+           <td>
+           <code>207.49</code>
            </td>
         </tr>
      </tbody>
