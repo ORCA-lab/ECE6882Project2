@@ -154,6 +154,14 @@
        </tr>
         <tr>
            <td>
+           <code>Jani</code>
+           </td>
+           <td>
+           <code>208.53</code>
+           </td>
+        </tr>
+        <tr>
+           <td>
            <code>Arante_Andre</code>
            </td>
            <td>
@@ -182,14 +190,6 @@
            </td>
            <td>
            <code>147.92</code>
-           </td>
-        </tr>
-        <tr>
-           <td>
-           <code>Jani</code>
-           </td>
-           <td>
-           <code>146.09</code>
            </td>
         </tr>
         <tr>
