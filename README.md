@@ -166,7 +166,7 @@
            <code>Arante_Andre</code>
            </td>
            <td>
-           <code>193.93</code>
+           <code>207.03</code>
            </td>
         </tr>
         <tr>
