@@ -93,6 +93,14 @@
            <code>717.33</code>
            </td>
         </tr>
+        <tr>
+           <td>
+           <code>Arante_Andre</code>
+           </td>
+           <td>
+           <code>699.56</code>
+           </td>
+        </tr>
          <tr>
            <td>
            <code>Desi_Reinforcement</code>
@@ -117,14 +125,7 @@
            <code>238.77</code>
            </td>
         </tr>
-        <tr>
-           <td>
-           <code>Arante_Andre</code>
-           </td>
-           <td>
-           <code>207.49</code>
-           </td>
-        </tr>
+        
      </tbody>
    </table>
 2. LunarLander
