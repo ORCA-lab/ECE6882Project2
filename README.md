@@ -144,6 +144,14 @@
            <code>255.52</code>
            </td>
         </tr>
+        <tr>
+           <td>
+           <code>The_Agents</code>
+           </td>
+           <td>
+           <code>243.51</code>
+           </td>
+        </tr>
        <tr>
          <td>
            <code>JAC</code>
@@ -190,14 +198,6 @@
            </td>
            <td>
            <code>147.92</code>
-           </td>
-        </tr>
-        <tr>
-           <td>
-           <code>The_Agents</code>
-           </td>
-           <td>
-           <code>49.894</code>
            </td>
         </tr>
      </tbody>
