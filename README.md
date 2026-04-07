@@ -211,6 +211,14 @@
        </tr>
      </thead>
      <tbody>
+        <tr>
+           <td>
+           <code>Jani</code>
+           </td>
+           <td>
+           <code>9144.99</code>
+           </td>
+        </tr>
        <tr>
          <td>
            <code>JAC</code>
@@ -265,14 +273,6 @@
            </td>
            <td>
            <code>4494.77</code>
-           </td>
-        </tr>
-        <tr>
-           <td>
-           <code>Jani</code>
-           </td>
-           <td>
-           <code>651.12</code>
            </td>
         </tr>
      </tbody>
