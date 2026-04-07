@@ -272,7 +272,7 @@
            <code>Jani</code>
            </td>
            <td>
-           <code>395.05</code>
+           <code>651.12</code>
            </td>
         </tr>
      </tbody>
