@@ -277,6 +277,121 @@
         </tr>
      </tbody>
    </table>
-   4. Overall Performance (Normalized to 0-100)
-   
+   4. Overall Performance (Normalized to 75-100)
+   <table>
+  <thead>
+    <tr>
+      <th style="width:30%">Team</th>
+      <th style="width:70%">Score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>JAC</code></td>
+      <td><code>95.66</code></td>
+    </tr>
+    <tr>
+      <td><code>Ziyuan_Zhou901</code></td>
+      <td><code>92.73</code></td>
+    </tr>
+    <tr>
+      <td><code>The_Agents</code></td>
+      <td><code>90.70</code></td>
+    </tr>
+    <tr>
+      <td><code>Arante_Andre</code></td>
+      <td><code>88.37</code></td>
+    </tr>
+    <tr>
+      <td><code>Jani</code></td>
+      <td><code>88.03</code></td>
+    </tr>
+    <tr>
+      <td><code>Hajimi</code></td>
+      <td><code>85.99</code></td>
+    </tr>
+    <tr>
+      <td><code>Desi_reinforcement</code></td>
+      <td><code>82.24</code></td>
+    </tr>
+    <tr>
+      <td><code>Vu_Dao</code></td>
+      <td><code>78.47</code></td>
+    </tr>
+  </tbody>
+</table>
+
+If you want the version with all three normalized problem scores plus average, use this:
+
+<h2>4. Overall Performance (Normalized to 75-100 and ranked based on average performance)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Team</th>
+      <th>Car Racing</th>
+      <th>LunarLander</th>
+      <th>Humanoid</th>
+      <th>Average</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>JAC</code></td>
+      <td><code>96.99</code></td>
+      <td><code>96.94</code></td>
+      <td><code>93.06</code></td>
+      <td><code>95.66</code></td>
+    </tr>
+    <tr>
+      <td><code>Ziyuan_Zhou901</code></td>
+      <td><code>95.25</code></td>
+      <td><code>100.00</code></td>
+      <td><code>82.95</code></td>
+      <td><code>92.73</code></td>
+    </tr>
+    <tr>
+      <td><code>The_Agents</code></td>
+      <td><code>95.29</code></td>
+      <td><code>97.21</code></td>
+      <td><code>79.61</code></td>
+      <td><code>90.70</code></td>
+    </tr>
+    <tr>
+      <td><code>Arante_Andre</code></td>
+      <td><code>94.49</code></td>
+      <td><code>88.73</code></td>
+      <td><code>81.89</code></td>
+      <td><code>88.37</code></td>
+    </tr>
+    <tr>
+      <td><code>Jani</code></td>
+      <td><code>75.00</code></td>
+      <td><code>89.08</code></td>
+      <td><code>100.00</code></td>
+      <td><code>88.03</code></td>
+    </tr>
+    <tr>
+      <td><code>Hajimi</code></td>
+      <td><code>100.00</code></td>
+      <td><code>80.10</code></td>
+      <td><code>77.87</code></td>
+      <td><code>85.99</code></td>
+    </tr>
+    <tr>
+      <td><code>Desi_reinforcement</code></td>
+      <td><code>88.84</code></td>
+      <td><code>77.61</code></td>
+      <td><code>80.26</code></td>
+      <td><code>82.24</code></td>
+    </tr>
+    <tr>
+      <td><code>Vu_Dao</code></td>
+      <td><code>85.41</code></td>
+      <td><code>75.00</code></td>
+      <td><code>75.00</code></td>
+      <td><code>78.47</code></td>
+    </tr>
+  </tbody>
+</table>
 
