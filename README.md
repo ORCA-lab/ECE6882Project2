@@ -321,8 +321,6 @@
   </tbody>
 </table>
 
-If you want the version with all three normalized problem scores plus average, use this:
-
 <h2>4. Overall Performance (Normalized to 75-100 and ranked based on average performance)</h2>
 
 <table>
