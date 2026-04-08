@@ -277,52 +277,7 @@
         </tr>
      </tbody>
    </table>
-   4. Overall Performance (Normalized to 75-100)
-   <table>
-  <thead>
-    <tr>
-      <th style="width:30%">Team</th>
-      <th style="width:70%">Score</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>JAC</code></td>
-      <td><code>95.66</code></td>
-    </tr>
-    <tr>
-      <td><code>Ziyuan_Zhou901</code></td>
-      <td><code>92.73</code></td>
-    </tr>
-    <tr>
-      <td><code>The_Agents</code></td>
-      <td><code>90.70</code></td>
-    </tr>
-    <tr>
-      <td><code>Arante_Andre</code></td>
-      <td><code>88.37</code></td>
-    </tr>
-    <tr>
-      <td><code>Jani</code></td>
-      <td><code>88.03</code></td>
-    </tr>
-    <tr>
-      <td><code>Hajimi</code></td>
-      <td><code>85.99</code></td>
-    </tr>
-    <tr>
-      <td><code>Desi_reinforcement</code></td>
-      <td><code>82.24</code></td>
-    </tr>
-    <tr>
-      <td><code>Vu_Dao</code></td>
-      <td><code>78.47</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<h2>4. Overall Performance (Normalized to 75-100 and ranked based on average performance)</h2>
-
+4. Overall Performance (Normalized to 75-100 and ranked based on average performance)<
 <table>
   <thead>
     <tr>
