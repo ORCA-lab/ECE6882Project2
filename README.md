@@ -277,7 +277,7 @@
         </tr>
      </tbody>
    </table>
-4. Overall Performance (Normalized to 75-100 and ranked based on average performance)<
+4. Overall Performance (Normalized to 75-100 and ranked based on average performance)
 <table>
   <thead>
     <tr>
