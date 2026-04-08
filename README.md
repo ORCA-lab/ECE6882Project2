@@ -316,51 +316,58 @@
     <tr>
       <td><code>JAC</code></td>
       <td><code>96.99</code></td>
-      <td><code>96.94</code></td>
+      <td><code>92.21</code></td>
       <td><code>93.06</code></td>
-      <td><code>95.66</code></td>
+      <td><code>94.09</code></td>
+    </tr>
+    <tr>
+      <td><code>Saad_Mankarious</code></td>
+      <td><code>97.94</code></td>
+      <td><code>100.00</code></td>
+      <td><code>78.22</code></td>
+      <td><code>92.05</code></td>
     </tr>
     <tr>
       <td><code>Ziyuan_Zhou901</code></td>
       <td><code>95.25</code></td>
-      <td><code>100.00</code></td>
+      <td><code>94.61</code></td>
       <td><code>82.95</code></td>
-      <td><code>92.73</code></td>
+      <td><code>90.94</code></td>
     </tr>
     <tr>
       <td><code>The_Agents</code></td>
       <td><code>95.29</code></td>
-      <td><code>97.21</code></td>
+      <td><code>92.42</code></td>
       <td><code>79.61</code></td>
-      <td><code>90.70</code></td>
+      <td><code>89.11</code></td>
     </tr>
     <tr>
       <td><code>Arante_Andre</code></td>
       <td><code>94.49</code></td>
-      <td><code>88.73</code></td>
+      <td><code>85.77</code></td>
       <td><code>81.89</code></td>
-      <td><code>88.37</code></td>
+      <td><code>87.38</code></td>
     </tr>
     <tr>
       <td><code>Jani</code></td>
       <td><code>75.00</code></td>
-      <td><code>89.08</code></td>
+      <td><code>86.05</code></td>
       <td><code>100.00</code></td>
-      <td><code>88.03</code></td>
+      <td><code>87.02</code></td>
     </tr>
     <tr>
       <td><code>Hajimi</code></td>
       <td><code>100.00</code></td>
-      <td><code>80.10</code></td>
+      <td><code>79.00</code></td>
       <td><code>77.87</code></td>
-      <td><code>85.99</code></td>
+      <td><code>85.63</code></td>
     </tr>
     <tr>
-      <td><code>Desi_reinforcement</code></td>
+      <td><code>Desi_Reinforcement</code></td>
       <td><code>88.84</code></td>
-      <td><code>77.61</code></td>
+      <td><code>77.05</code></td>
       <td><code>80.26</code></td>
-      <td><code>82.24</code></td>
+      <td><code>82.05</code></td>
     </tr>
     <tr>
       <td><code>Vu_Dao</code></td>
@@ -371,4 +378,3 @@
     </tr>
   </tbody>
 </table>
-
